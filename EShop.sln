@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4E1E4B23-3FC6-4EF7-A951-3CE66695B33A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{ACD78FF0-0DAD-42BE-B89C-129FB01942D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Basket.API\Basket.API.csproj", "{3B4E8932-CF45-4437-B076-077317029278}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B4E8932-CF45-4437-B076-077317029278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4E8932-CF45-4437-B076-077317029278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4E8932-CF45-4437-B076-077317029278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4E8932-CF45-4437-B076-077317029278}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ACD78FF0-0DAD-42BE-B89C-129FB01942D8} = {4E1E4B23-3FC6-4EF7-A951-3CE66695B33A}
+		{3B4E8932-CF45-4437-B076-077317029278} = {ACD78FF0-0DAD-42BE-B89C-129FB01942D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04AA6CFD-DBA3-442C-AA39-41A366EFE7E8}
