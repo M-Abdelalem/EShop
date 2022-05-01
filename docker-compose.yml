@@ -6,14 +6,14 @@ services:
     build:
       context: .
       dockerfile: Basket.API\Dockerfile
-  cache:
+  redis:
     image: redis:6.2-alpine
     restart: always
     ports:
       - '6379:6379'
     command: redis-server --save 20 1 --loglevel warning 
     volumes: 
-      - cache:/data
+      - redis:/data
 volumes:
-  cache:
+  redis:
     driver: local
