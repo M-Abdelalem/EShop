@@ -6,6 +6,11 @@ services:
     build:
       context: .
       dockerfile: Basket.API\Dockerfile
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: Catalog.API\Catalog.API\Dockerfile
   redis:
     image: redis:6.2-alpine
     restart: always
@@ -14,6 +19,17 @@ services:
     command: redis-server --save 20 1 --loglevel warning 
     volumes: 
       - redis:/data
+  mongo:
+    image: mongo
+    restart: always
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
 volumes:
   redis:
     driver: local
