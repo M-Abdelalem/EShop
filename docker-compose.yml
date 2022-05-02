@@ -10,7 +10,7 @@ services:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
       context: .
-      dockerfile: Catalog.API\Catalog.API\Dockerfile
+      dockerfile: Catalog.API\Dockerfile
   redis:
     image: redis:6.2-alpine
     restart: always
