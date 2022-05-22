@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Catalog.API/Catalog.API/Catalog.API.csproj", "Catalog.API/Catalog.API/"]
-RUN dotnet restore "Catalog.API/Catalog.API/Catalog.API.csproj"
+COPY ["Catalog.API/Catalog.API.csproj", "Catalog.API/"]
+RUN dotnet restore "Catalog.API/Catalog.API.csproj"
 COPY . .
-WORKDIR "/src/Catalog.API/Catalog.API"
+WORKDIR "/src/Catalog.API"
 RUN dotnet build "Catalog.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
